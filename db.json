@@ -1,0 +1,10 @@
+{
+  "users": [{
+  "email": "test@mail.com",
+  "password": "testPassw0rd"
+  }],
+  "products": [
+    { "id": 1, "name": "經典白T恤", "price": 500 },
+    { "id": 2, "name": "牛仔褲", "price": 1200 }
+  ]
+}
