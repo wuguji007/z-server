@@ -9,6 +9,12 @@ const { v4: uuidv4 } = require('uuid'); // 載入 UUID 套件
 const nodemailer = require('nodemailer'); // 載入 郵件套件
 
 const server = jsonServer.create();
+
+
+const isProduction = process.env.NODE_ENV === 'production' || !!process.env.PORT;
+const dbPath = isProduction ? '/data/db.json': path.join(__dirname, 'db.json');
+console.log(`目前使用的資料庫路徑: ${dbPath}`);
+
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
@@ -210,7 +216,7 @@ server.post('/api/verify', (req, res) => {
 
 
 /* 重新發送驗證碼API */
-server.post('/api/resend-verificaiton', async (req, res) => {
+server.post('/api/resend-verification', async (req, res) => {
   const { email } = req.body;
 
   //比對email
