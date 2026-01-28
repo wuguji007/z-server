@@ -10,12 +10,12 @@ const nodemailer = require('nodemailer'); // 載入 郵件套件
 
 const server = jsonServer.create();
 
-
 const isProduction = process.env.NODE_ENV === 'production' || !!process.env.PORT;
 const dbPath = isProduction ? '/data/db.json': path.join(__dirname, 'db.json');
 console.log(`目前使用的資料庫路徑: ${dbPath}`);
 
-const router = jsonServer.router('db.json');
+const router = jsonServer.router(dbPath);
+// const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
 // 設定參數
