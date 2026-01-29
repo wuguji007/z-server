@@ -235,7 +235,7 @@ server.post('/api/resend-verification', async (req, res) => {
 
     //寫入新驗證碼
     router.db.get('users')
-      .find('email')
+      .find({ email })
       .assign({ verificationCode: newCode })
       .write();
 
