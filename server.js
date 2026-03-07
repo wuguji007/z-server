@@ -548,8 +548,8 @@ server.post('/api/payment/create-order', (req, res) => {
     // 付款完成後藍新POST回後端（非同步通知）
     NotifyURL: `${BACKEND_URL}/api/payment/notify`,
     // GitHub Pages 靜態網站不接受 POST，藍新以 POST 導回，必須先經後端轉址
-    ReturnURL:   `${BACKEND_URL}/z-client/index.html#/payment-complete`,
-    CustomerURL: `${BACKEND_URL}/z-client/index.html#/payment-complete`,
+    ReturnURL:   `${BACKEND_URL}/api/payment/return`,
+    CustomerURL: `${BACKEND_URL}/api/payment/return`,
     ...paymentParams,
   };
 
