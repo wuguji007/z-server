@@ -1,5 +1,24 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "ae06b8e4-4a03-495f-962d-4cece5a475da",
+      "email": "39ii6vc12a@bltiwd.com",
+      "password": "$2b$10$CSMyoz5QDTrcD3VTMTphTOKWnZ8CpYjtrPGIISlCK/4BsWVzg647i",
+      "username": "Max",
+      "role": "user",
+      "isVerified": true,
+      "verificationCode": null
+    },
+    {
+      "id": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "email": "alie40521@gmail.com",
+      "password": "$2b$10$gg4SwSeDx5UvT3SkDH1pFuHQknONQG8xDthAkH7/6irv3WbDOiEDe",
+      "username": "Max",
+      "role": "user",
+      "isVerified": true,
+      "verificationCode": null
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -10,6 +29,1882 @@
       "id": 2,
       "name": "牛仔褲",
       "price": 1200
+    }
+  ],
+  "orders": [
+    {
+      "id": "f82cd0e9-74c1-473e-9007-32ab875fba67",
+      "merchantOrderNo": "ZNM-20240315-143022-A7K2",
+      "userId": "ae06b8e4-4a03-495f-962d-4cece5a475da",
+      "items": [
+        {
+          "id": "prod-001",
+          "name": "經典白色T恤",
+          "price": 590,
+          "quantity": 2
+        },
+        {
+          "id": "prod-002",
+          "name": "牛仔長褲",
+          "price": 1280,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 2460,
+      "shippingFee": 0,
+      "total": 2460,
+      "receiverName": "王小明",
+      "phone": "0912345678",
+      "email": "test@example.com",
+      "address": "台北市信義區松仁路100號5樓",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "SUCCESS",
+      "createdAt": "2026-03-04T13:48:37.663Z",
+      "updatedAt": "2026-03-04T16:32:03.897Z",
+      "paymentType": "CREDIT",
+      "paidAmt": 2460,
+      "paidAt": "2026-03-04T16:32:03.896Z"
+    },
+    {
+      "id": "7ed320cc-f5a9-44b2-9650-397db250c4d2",
+      "merchantOrderNo": "ZNM-20240315-143022-A8K2",
+      "userId": "ae06b8e4-4a03-495f-962d-4cece5a475da",
+      "items": [
+        {
+          "id": "prod-001",
+          "name": "經典黑色T恤",
+          "price": 590,
+          "quantity": 2
+        },
+        {
+          "id": "prod-002",
+          "name": "牛仔長裙",
+          "price": 1280,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 2460,
+      "shippingFee": 0,
+      "total": 2460,
+      "receiverName": "王小明",
+      "phone": "0912345678",
+      "email": "alie40521@gmail.com",
+      "address": "台北市信義區松仁路100號5樓",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "SUCCESS",
+      "createdAt": "2026-03-04T16:36:33.136Z",
+      "updatedAt": "2026-03-04T16:46:52.235Z",
+      "paidAmt": 2460,
+      "paidAt": "2026-03-04T16:46:52.234Z"
+    },
+    {
+      "id": "72089964-549d-44f0-a706-38eff254621c",
+      "merchantOrderNo": "ZNM202603051859363FTI",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 13,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p11.svg",
+          "title": "保濕化妝水（清爽型）",
+          "price": 499,
+          "originalPrice": 699,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 10,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p14.svg",
+          "title": "高畫質家用投影機",
+          "price": 9399,
+          "originalPrice": 10099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 11,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p20.svg",
+          "title": "重低音藍牙喇叭（RGB燈效）",
+          "price": 3799,
+          "originalPrice": 5099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 23,
+          "category": "廚房用具",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p13.svg",
+          "title": "不沾鍋具套組（湯鍋／平底鍋）",
+          "price": 5399,
+          "originalPrice": 6099,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 22,
+          "category": "廚房用具",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p12.svg",
+          "title": "廚房清潔菜瓜布套組（多入）",
+          "price": 129,
+          "originalPrice": 159,
+          "unit": "包",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 19624,
+      "shippingFee": 0,
+      "total": 19424,
+      "receiverName": "李白",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "ji3vu;3gjo4rul4",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T11:05:14.695Z",
+      "updatedAt": "2026-03-05T11:05:14.695Z"
+    },
+    {
+      "id": "d14d7dfe-5713-45eb-8639-54e9cc9ae2e2",
+      "merchantOrderNo": "ZNM202603051906201GYK",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 13,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p11.svg",
+          "title": "保濕化妝水（清爽型）",
+          "price": 499,
+          "originalPrice": 699,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 10,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p14.svg",
+          "title": "高畫質家用投影機",
+          "price": 9399,
+          "originalPrice": 10099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 11,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p20.svg",
+          "title": "重低音藍牙喇叭（RGB燈效）",
+          "price": 3799,
+          "originalPrice": 5099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 23,
+          "category": "廚房用具",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p13.svg",
+          "title": "不沾鍋具套組（湯鍋／平底鍋）",
+          "price": 5399,
+          "originalPrice": 6099,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 22,
+          "category": "廚房用具",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p12.svg",
+          "title": "廚房清潔菜瓜布套組（多入）",
+          "price": 129,
+          "originalPrice": 159,
+          "unit": "包",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 19624,
+      "shippingFee": 0,
+      "total": 19624,
+      "receiverName": "杜甫",
+      "phone": "123456789",
+      "email": "alie40521@gmail.com",
+      "address": "ertyuio",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T11:06:42.302Z",
+      "updatedAt": "2026-03-05T11:06:42.302Z"
+    },
+    {
+      "id": "6cf84be6-10a3-4bf4-8bb7-1a60c9f2e27f",
+      "merchantOrderNo": "ZNM20260305211410LT8V",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 13,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p11.svg",
+          "title": "保濕化妝水（清爽型）",
+          "price": 499,
+          "originalPrice": 699,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 499,
+      "shippingFee": 120,
+      "total": 619,
+      "receiverName": "王保羅",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "sadfdghkj",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T13:14:17.418Z",
+      "updatedAt": "2026-03-05T13:14:17.418Z"
+    },
+    {
+      "id": "80c49c4c-d9eb-4163-9686-9b8f805ec3e0",
+      "merchantOrderNo": "ZNM20260305212426314D",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 13,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p11.svg",
+          "title": "保濕化妝水（清爽型）",
+          "price": 499,
+          "originalPrice": 699,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 499,
+      "shippingFee": 120,
+      "total": 619,
+      "receiverName": "林曼蒂",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT_INST",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T13:26:45.860Z",
+      "updatedAt": "2026-03-05T13:26:45.860Z"
+    },
+    {
+      "id": "4832dc6e-31da-41bc-8108-c171c34ea7f0",
+      "merchantOrderNo": "ZNM20260305212652FJJ6",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 13,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p11.svg",
+          "title": "保濕化妝水（清爽型）",
+          "price": 499,
+          "originalPrice": 699,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 499,
+      "shippingFee": 120,
+      "total": 619,
+      "receiverName": "林曼蒂",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "WEBATM",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T13:27:26.445Z",
+      "updatedAt": "2026-03-05T13:27:26.445Z"
+    },
+    {
+      "id": "3e072c32-a253-4e49-8ac1-4028bd433633",
+      "merchantOrderNo": "ZNM202603052137053M4Q",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 13,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p11.svg",
+          "title": "保濕化妝水（清爽型）",
+          "price": 499,
+          "originalPrice": 699,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 499,
+      "shippingFee": 120,
+      "total": 419,
+      "receiverName": "張麥克",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "VACC",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T13:38:00.514Z",
+      "updatedAt": "2026-03-05T13:38:00.514Z"
+    },
+    {
+      "id": "b8df82aa-d378-471b-8a78-b593210518db",
+      "merchantOrderNo": "ZNM20260305214040R7E0",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 13,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p11.svg",
+          "title": "保濕化妝水（清爽型）",
+          "price": 499,
+          "originalPrice": 699,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 499,
+      "shippingFee": 120,
+      "total": 419,
+      "receiverName": "劉安迪",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T13:41:46.346Z",
+      "updatedAt": "2026-03-05T13:41:46.346Z"
+    },
+    {
+      "id": "818c7395-bcea-4a18-9a42-01c27aa31a09",
+      "merchantOrderNo": "ZNM20260305000422B7QF",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 13,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p11.svg",
+          "title": "保濕化妝水（清爽型）",
+          "price": 499,
+          "originalPrice": 699,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 499,
+      "shippingFee": 120,
+      "total": 619,
+      "receiverName": "王馬克",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "wsdfghyuk",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T16:05:18.806Z",
+      "updatedAt": "2026-03-05T16:05:18.806Z"
+    },
+    {
+      "id": "a53754a1-49a6-40b1-80dc-6e34e1137348",
+      "merchantOrderNo": "ZNM20260305004317I7V2",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 10,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p14.svg",
+          "title": "高畫質家用投影機",
+          "price": 9399,
+          "originalPrice": 10099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 15,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p26.svg",
+          "title": "防水狗狗雨衣（黃色反光條）",
+          "price": 399,
+          "originalPrice": 599,
+          "unit": "件",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 16,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p23.svg",
+          "title": "貓咪悠閒玩具組(含貓抓板/貓草)",
+          "price": 789,
+          "originalPrice": 819,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 10587,
+      "shippingFee": 0,
+      "total": 10087,
+      "receiverName": "江艾咪",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T16:43:50.471Z",
+      "updatedAt": "2026-03-05T16:43:50.471Z"
+    },
+    {
+      "id": "582c9983-be39-4382-b13f-4abc060ad62c",
+      "merchantOrderNo": "ZNM20260305010910PYJQ",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 2418,
+      "shippingFee": 0,
+      "total": 2218,
+      "receiverName": "李黎",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "WEBATM",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T17:10:59.729Z",
+      "updatedAt": "2026-03-05T17:10:59.729Z"
+    },
+    {
+      "id": "b619b14b-bd8d-42fe-bf2c-c46179fb7d75",
+      "merchantOrderNo": "ZNM20260305011223TRDJ",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 9,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p7.svg",
+          "title": "智慧空氣清淨機（家用型）",
+          "price": 7999,
+          "originalPrice": 8099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 7999,
+      "shippingFee": 0,
+      "total": 7999,
+      "receiverName": "李黎",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CVS",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T17:12:36.042Z",
+      "updatedAt": "2026-03-05T17:12:36.042Z"
+    },
+    {
+      "id": "71400b34-7e90-43c7-9ba0-41efaaaec48b",
+      "merchantOrderNo": "ZNM20260305011453UM1J",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 10,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p14.svg",
+          "title": "高畫質家用投影機",
+          "price": 9399,
+          "originalPrice": 10099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 9399,
+      "shippingFee": 0,
+      "total": 9199,
+      "receiverName": "羅百吉",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CVS",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T17:15:18.029Z",
+      "updatedAt": "2026-03-05T17:15:18.029Z"
+    },
+    {
+      "id": "f3d0cd26-bf4e-40f8-9597-0731b0c057d1",
+      "merchantOrderNo": "ZNM20260305013807CHQF",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 21,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p10.svg",
+          "title": "羽毛逗貓棒玩具組",
+          "price": 49,
+          "originalPrice": 69,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 16,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p23.svg",
+          "title": "貓咪悠閒玩具組(含貓抓板/貓草)",
+          "price": 789,
+          "originalPrice": 819,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 14,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p21.svg",
+          "title": "寵愛營養處方貓咪乾糧2包-腸胃配方",
+          "price": 899,
+          "originalPrice": 1099,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1737,
+      "shippingFee": 0,
+      "total": 1537,
+      "receiverName": "吳迪",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CVS",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T17:39:12.455Z",
+      "updatedAt": "2026-03-05T17:39:12.455Z"
+    },
+    {
+      "id": "478b367d-8f89-47ef-83c6-1e48ab6fb849",
+      "merchantOrderNo": "ZNM20260305014903TAXL",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1890,
+      "shippingFee": 0,
+      "total": 1690,
+      "receiverName": "周艾登",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CVS",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-05T17:49:57.742Z",
+      "updatedAt": "2026-03-05T17:49:57.742Z"
+    },
+    {
+      "id": "e8b23120-b38f-417e-814f-c2a64fbe62e1",
+      "merchantOrderNo": "ZNM20260306142640QFKC",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 14,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p21.svg",
+          "title": "寵愛營養處方貓咪乾糧2包-腸胃配方",
+          "price": 899,
+          "originalPrice": 1099,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 15,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p26.svg",
+          "title": "防水狗狗雨衣（黃色反光條）",
+          "price": 399,
+          "originalPrice": 599,
+          "unit": "件",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 19,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p25.svg",
+          "title": "狗狗雞肉口味主食罐頭x6罐",
+          "price": 1499,
+          "originalPrice": 1699,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 3,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p28.svg",
+          "title": "晶亮維他命C（顧眼配方升級）",
+          "price": 659,
+          "originalPrice": 729,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 7,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p27.svg",
+          "title": "台東上選上好米3包一入",
+          "price": 899,
+          "originalPrice": 949,
+          "unit": "袋",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 4355,
+      "shippingFee": 0,
+      "total": 3855,
+      "receiverName": "江大海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "WEBATM",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T06:28:03.848Z",
+      "updatedAt": "2026-03-06T06:28:03.848Z"
+    },
+    {
+      "id": "6b184afd-ae5d-4321-8bd0-0050f9adb05c",
+      "merchantOrderNo": "ZNM202603061429205J9D",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 3,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p28.svg",
+          "title": "晶亮維他命C（顧眼配方升級）",
+          "price": 659,
+          "originalPrice": 729,
+          "unit": "瓶",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 30,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p32.svg",
+          "title": "韓廚娘泡菜拉麵 12包x1箱",
+          "price": 699,
+          "originalPrice": 799,
+          "unit": "箱",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 2,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p32.svg",
+          "title": "韓廚娘泡菜拉麵 12包x1箱",
+          "price": 699,
+          "originalPrice": 799,
+          "unit": "箱",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 6,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p35.svg",
+          "title": "龜乙萬精釀油膏套組（2組）",
+          "price": 589,
+          "originalPrice": 639,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 2646,
+      "shippingFee": 0,
+      "total": 2446,
+      "receiverName": "楊提姆",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "WEBATM",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T06:30:47.132Z",
+      "updatedAt": "2026-03-06T06:30:47.132Z"
+    },
+    {
+      "id": "da5e657b-c805-44a6-9f26-2d4b7856c3c4",
+      "merchantOrderNo": "ZNM202603061444108MYA",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 21,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p10.svg",
+          "title": "羽毛逗貓棒玩具組",
+          "price": 49,
+          "originalPrice": 69,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 14,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p21.svg",
+          "title": "寵愛營養處方貓咪乾糧2包-腸胃配方",
+          "price": 899,
+          "originalPrice": 1099,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 16,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p23.svg",
+          "title": "貓咪悠閒玩具組(含貓抓板/貓草)",
+          "price": 789,
+          "originalPrice": 819,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1737,
+      "shippingFee": 0,
+      "total": 1537,
+      "receiverName": "趙雲",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "WEBATM",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T06:44:33.444Z",
+      "updatedAt": "2026-03-06T06:44:33.444Z"
+    },
+    {
+      "id": "f94166e0-bc75-4153-9810-5aa7bd4a0db3",
+      "merchantOrderNo": "ZNM20260306144704BZBR",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 2019,
+      "shippingFee": 0,
+      "total": 1819,
+      "receiverName": "盧比歐",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "wertyjujio;",
+      "paymentMethod": "WEBATM",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T06:48:40.264Z",
+      "updatedAt": "2026-03-06T06:48:40.264Z"
+    },
+    {
+      "id": "b7642b8d-6127-4fab-93e4-dd0f3effefb1",
+      "merchantOrderNo": "ZNM20260306145223L4G1",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 129,
+      "shippingFee": 120,
+      "total": 49,
+      "receiverName": "王冰冰",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "dsfdghjklo;p",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T06:53:09.156Z",
+      "updatedAt": "2026-03-06T06:53:09.156Z"
+    },
+    {
+      "id": "76ef21c5-94bf-4f06-b4d0-006497916d61",
+      "merchantOrderNo": "ZNM20260306145626MGYP",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 9,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p7.svg",
+          "title": "智慧空氣清淨機（家用型）",
+          "price": 7999,
+          "originalPrice": 8099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 7999,
+      "shippingFee": 0,
+      "total": 7999,
+      "receiverName": "張艾倫",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "sadtytuioi",
+      "paymentMethod": "WEBATM",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T06:57:11.171Z",
+      "updatedAt": "2026-03-06T06:57:11.171Z"
+    },
+    {
+      "id": "01e88d20-6430-475f-a157-881c8510efd3",
+      "merchantOrderNo": "ZNM20260306150010HBOB",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1890,
+      "shippingFee": 0,
+      "total": 1890,
+      "receiverName": "test111",
+      "phone": "123456789",
+      "email": "alie40521@gmail.com",
+      "address": "sdfhghkjljk;l",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T07:00:36.117Z",
+      "updatedAt": "2026-03-06T07:00:36.117Z"
+    },
+    {
+      "id": "6dc0666d-e621-49ab-b6f5-ffcdedae83c6",
+      "merchantOrderNo": "ZNM20260306151646N28P",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 129,
+      "shippingFee": 120,
+      "total": 249,
+      "receiverName": "羅一心",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T07:17:02.320Z",
+      "updatedAt": "2026-03-06T07:17:02.320Z"
+    },
+    {
+      "id": "fb760af4-da3d-4fd8-b213-9cc6aaa1aa5b",
+      "merchantOrderNo": "ZNM20260306152047UYQI",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 519,
+      "receiverName": "白泡泡",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "sdafghjkl",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T07:21:24.331Z",
+      "updatedAt": "2026-03-06T07:21:24.331Z"
+    },
+    {
+      "id": "43fc284e-855d-4e12-9bb7-21d044d58eee",
+      "merchantOrderNo": "ZNM-20240315-143022-A8K5",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": "prod-001",
+          "name": "經典黑色T恤",
+          "price": 590,
+          "quantity": 2
+        },
+        {
+          "id": "prod-002",
+          "name": "牛仔長裙",
+          "price": 1280,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 2460,
+      "shippingFee": 0,
+      "total": 2460,
+      "receiverName": "王大明",
+      "phone": "0912345678",
+      "email": "alie40521@gmail.com",
+      "address": "台北市信義區松仁路100號5樓",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "SUCCESS",
+      "createdAt": "2026-03-06T07:25:18.300Z",
+      "updatedAt": "2026-03-06T08:53:36.130Z",
+      "paidAmt": 2460,
+      "paidAt": "2026-03-06T08:53:36.130Z"
+    },
+    {
+      "id": "a77c1608-6ca4-4a78-a6c4-8aa40a6164c5",
+      "merchantOrderNo": "ZNM20260306155335CNED",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1890,
+      "shippingFee": 0,
+      "total": 1890,
+      "receiverName": "柯柯",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T07:53:53.523Z",
+      "updatedAt": "2026-03-06T07:53:53.523Z"
+    },
+    {
+      "id": "32acbce9-72e7-4785-805e-7fb8f8fc8ee1",
+      "merchantOrderNo": "ZNM20260306160924VHF3",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 9,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p7.svg",
+          "title": "智慧空氣清淨機（家用型）",
+          "price": 7999,
+          "originalPrice": 8099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 18,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p22.svg",
+          "title": "狗狗潔牙骨12入組-綠茶清新",
+          "price": 289,
+          "originalPrice": 319,
+          "unit": "包",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 8417,
+      "shippingFee": 0,
+      "total": 8217,
+      "receiverName": "蔡妮妮",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "sgdfhjiop",
+      "paymentMethod": "VACC",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T08:09:46.706Z",
+      "updatedAt": "2026-03-06T08:09:46.706Z"
+    },
+    {
+      "id": "3ba15bc3-e1f6-4fb6-b137-bfafaca182b8",
+      "merchantOrderNo": "ZNM202603061611330JCM",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1890,
+      "shippingFee": 0,
+      "total": 1890,
+      "receiverName": "Tiffany",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "sadfghj",
+      "paymentMethod": "VACC",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T08:11:55.944Z",
+      "updatedAt": "2026-03-06T08:11:55.944Z"
+    },
+    {
+      "id": "b4eafd65-6b52-45a1-a1ae-de3f5217afd7",
+      "merchantOrderNo": "ZNM20260306161327OOIM",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 519,
+      "receiverName": "TEST",
+      "phone": "123456789",
+      "email": "alie40521@gmail.com",
+      "address": "dsafghjkli",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T08:13:41.454Z",
+      "updatedAt": "2026-03-06T08:13:41.454Z"
+    },
+    {
+      "id": "d22031da-0959-4b12-a807-25d8c39d05b3",
+      "merchantOrderNo": "ZNM20260306165632W4OB",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1890,
+      "shippingFee": 0,
+      "total": 1690,
+      "receiverName": "王東尼",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T08:56:57.551Z",
+      "updatedAt": "2026-03-06T08:56:57.551Z"
+    },
+    {
+      "id": "8b7b7fb1-1dcb-4b9e-9ab5-724c3225e99d",
+      "merchantOrderNo": "ZNM20260306170844B5A8",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 319,
+      "receiverName": "TEST123",
+      "phone": "123456789",
+      "email": "alie40521@gmail.com",
+      "address": "dsfghh",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T09:09:05.502Z",
+      "updatedAt": "2026-03-06T09:09:05.502Z"
+    },
+    {
+      "id": "ab3c301a-a7ab-41a9-aaf4-b4a7c03e1a42",
+      "merchantOrderNo": "ZNM20260306171045N9RC",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 2019,
+      "shippingFee": 0,
+      "total": 1819,
+      "receiverName": "TEST123",
+      "phone": "1234567890",
+      "email": "alie40521@gmail.com",
+      "address": "adsfghjkl",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T09:11:00.885Z",
+      "updatedAt": "2026-03-06T09:11:00.885Z"
+    },
+    {
+      "id": "5b33edae-9202-42f0-81c7-38dd119ad59c",
+      "merchantOrderNo": "ZNM20260306171514F5JS",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 519,
+      "receiverName": "江江江",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T09:15:33.141Z",
+      "updatedAt": "2026-03-06T09:15:33.141Z"
+    },
+    {
+      "id": "9cc265ee-c487-4eec-b1dd-a735a42e101d",
+      "merchantOrderNo": "ZNM20260306171837P879",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 129,
+      "shippingFee": 120,
+      "total": 249,
+      "receiverName": "TEST",
+      "phone": "123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T09:18:50.663Z",
+      "updatedAt": "2026-03-06T09:18:50.663Z"
+    },
+    {
+      "id": "76758c08-d0d0-43f1-a86e-b89c2d064510",
+      "merchantOrderNo": "ZNM20260306172043GL41",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 9,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p7.svg",
+          "title": "智慧空氣清淨機（家用型）",
+          "price": 7999,
+          "originalPrice": 8099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 7999,
+      "shippingFee": 0,
+      "total": 7999,
+      "receiverName": "TEST",
+      "phone": "123456789",
+      "email": "alie40521@gmail.com",
+      "address": "asdfghjki",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T09:20:56.351Z",
+      "updatedAt": "2026-03-06T09:20:56.351Z"
+    },
+    {
+      "id": "3a6d696c-dfd6-49b3-a1d0-fd6cecb73c62",
+      "merchantOrderNo": "ZNM20260306173453NID2",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 129,
+      "shippingFee": 120,
+      "total": 49,
+      "receiverName": "TEST",
+      "phone": "123456789",
+      "email": "alie40521@gmail.com",
+      "address": "asdfghjhkjl;",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T09:35:08.326Z",
+      "updatedAt": "2026-03-06T09:35:08.326Z"
+    },
+    {
+      "id": "02a19a80-7b1e-43c2-8069-1a9a614d6813",
+      "merchantOrderNo": "ZNM20260306183549LUIT",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1890,
+      "shippingFee": 0,
+      "total": 1690,
+      "receiverName": "TEST",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "SUCCESS",
+      "createdAt": "2026-03-06T10:36:06.828Z",
+      "updatedAt": "2026-03-06T10:36:36.052Z",
+      "paymentType": "CREDIT",
+      "paidAmt": 1690,
+      "paidAt": "2026-03-06T10:36:36.052Z"
+    },
+    {
+      "id": "94ef7050-6e1f-404d-be6d-a69175a2264d",
+      "merchantOrderNo": "ZNM202603061838006FL8",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 23,
+          "category": "廚房用具",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p13.svg",
+          "title": "不沾鍋具套組（湯鍋／平底鍋）",
+          "price": 5399,
+          "originalPrice": 6099,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 5399,
+      "shippingFee": 0,
+      "total": 5199,
+      "receiverName": "TEST",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "VACC",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T10:38:36.855Z",
+      "updatedAt": "2026-03-06T10:38:36.855Z"
+    },
+    {
+      "id": "42aa71a9-ecbb-4878-8457-5c6cad2f8fa7",
+      "merchantOrderNo": "ZNM20260306183942PLIO",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 319,
+      "receiverName": "TEST",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "sadfghjkll;",
+      "paymentMethod": "VACC",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T10:39:58.381Z",
+      "updatedAt": "2026-03-06T10:39:58.381Z"
+    },
+    {
+      "id": "4f5e9a05-ae02-434f-b2ca-8635d3e61d0e",
+      "merchantOrderNo": "ZNM20260306184447XGY6",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 519,
+      "receiverName": "王一心",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "dsafghjkl;",
+      "paymentMethod": "VACC",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T10:45:28.822Z",
+      "updatedAt": "2026-03-06T10:45:28.822Z"
+    },
+    {
+      "id": "9c7d6393-07ad-41d6-a629-f491c9c0549e",
+      "merchantOrderNo": "ZNM20260306201505ZP3P",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 519,
+      "receiverName": "江東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "Taipei",
+      "paymentMethod": "CVS",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T12:15:35.698Z",
+      "updatedAt": "2026-03-06T12:15:35.698Z"
+    },
+    {
+      "id": "c8c26072-7460-48c6-9572-1cf7c3168173",
+      "merchantOrderNo": "ZNM20260306201637Q7S9",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 519,
+      "receiverName": "江東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "Taipei",
+      "paymentMethod": "CVS",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T12:17:00.359Z",
+      "updatedAt": "2026-03-06T12:17:00.359Z"
+    },
+    {
+      "id": "d9b8c651-9766-45f0-93f9-70b86f983083",
+      "merchantOrderNo": "ZNM202603062022355RW9",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 21,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p10.svg",
+          "title": "羽毛逗貓棒玩具組",
+          "price": 49,
+          "originalPrice": 69,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 49,
+      "shippingFee": 120,
+      "total": 69,
+      "receiverName": "李東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "Taipei",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "SUCCESS",
+      "createdAt": "2026-03-06T12:23:03.818Z",
+      "updatedAt": "2026-03-06T12:23:40.293Z",
+      "paymentType": "CREDIT",
+      "paidAmt": 69,
+      "paidAt": "2026-03-06T12:23:40.293Z"
+    },
+    {
+      "id": "b2453203-1a67-40c8-a4e5-86d403834725",
+      "merchantOrderNo": "ZNM20260306203424JNPD",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 9,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p7.svg",
+          "title": "智慧空氣清淨機（家用型）",
+          "price": 7999,
+          "originalPrice": 8099,
+          "unit": "台",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 7999,
+      "shippingFee": 0,
+      "total": 7999,
+      "receiverName": "張東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "Taipei",
+      "paymentMethod": "VACC",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T12:35:00.785Z",
+      "updatedAt": "2026-03-06T12:35:00.785Z"
+    },
+    {
+      "id": "c9f816fa-ee02-4e35-881b-ee6290707813",
+      "merchantOrderNo": "ZNM202603062051377POD",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1890,
+      "shippingFee": 0,
+      "total": 1890,
+      "receiverName": "張東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "門市自取",
+      "paymentMethod": "VACC",
+      "shippingMethod": "SELF_PICKUP",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T12:52:17.171Z",
+      "updatedAt": "2026-03-06T12:52:17.171Z"
+    },
+    {
+      "id": "bbb08f77-fc4c-4285-a8f3-7e7b1de18a07",
+      "merchantOrderNo": "ZNM20260306205622INSM",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 1,
+          "category": "食品飲料",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p6.svg",
+          "title": "嚴選紅茶茶包組（熱泡／冷泡適用）",
+          "price": 399,
+          "originalPrice": 499,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 399,
+      "shippingFee": 120,
+      "total": 519,
+      "receiverName": "陳東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "Taipei",
+      "paymentMethod": "VACC",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "SUCCESS",
+      "createdAt": "2026-03-06T12:56:46.693Z",
+      "updatedAt": "2026-03-06T12:59:45.967Z",
+      "paymentType": "VACC",
+      "paidAmt": 519,
+      "paidAt": "2026-03-06T12:59:45.967Z"
+    },
+    {
+      "id": "55da7000-e08a-4ffc-96b6-45fb41fc073c",
+      "merchantOrderNo": "ZNM20260306211810BB9V",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 1890,
+      "shippingFee": 0,
+      "total": 1890,
+      "receiverName": "趙東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "Taipei",
+      "paymentMethod": "VACC",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T13:18:34.403Z",
+      "updatedAt": "2026-03-06T13:18:34.403Z"
+    },
+    {
+      "id": "d305fc86-892d-4113-9bb3-f34117b05ee2",
+      "merchantOrderNo": "ZNM20260306003440FK9K",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 12,
+          "category": "美妝保養",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p8.svg",
+          "title": "保濕滋養沐浴乳",
+          "price": 129,
+          "originalPrice": 209,
+          "unit": "罐",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 8,
+          "category": "數位家電",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p15.svg",
+          "title": "無線藍牙耳罩式耳機",
+          "price": 1890,
+          "originalPrice": 2500,
+          "unit": "副",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 2019,
+      "shippingFee": 0,
+      "total": 1819,
+      "receiverName": "柳東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "Taipei",
+      "paymentMethod": "CREDIT",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "SUCCESS",
+      "createdAt": "2026-03-06T16:35:11.735Z",
+      "updatedAt": "2026-03-06T16:35:32.238Z",
+      "paymentType": "CREDIT",
+      "paidAmt": 1819,
+      "paidAt": "2026-03-06T16:35:32.238Z"
+    },
+    {
+      "id": "02635a87-ebd9-4928-a7bf-e9be94361040",
+      "merchantOrderNo": "ZNM20260306004101W3L1",
+      "userId": "339b7d10-6326-4106-91e7-be3cb046e572",
+      "items": [
+        {
+          "id": 20,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p9.svg",
+          "title": "多層貓跳台（含貓屋與抓板）",
+          "price": 5399,
+          "originalPrice": 6099,
+          "unit": "座",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 21,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p10.svg",
+          "title": "羽毛逗貓棒玩具組",
+          "price": 49,
+          "originalPrice": 69,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        },
+        {
+          "id": 14,
+          "category": "寵物用品",
+          "image": "https://storage.googleapis.com/zonama-project-assets/products-images/p21.svg",
+          "title": "寵愛營養處方貓咪乾糧2包-腸胃配方",
+          "price": 899,
+          "originalPrice": 1099,
+          "unit": "組",
+          "quantity": 1,
+          "checked": true
+        }
+      ],
+      "subtotal": 6347,
+      "shippingFee": 0,
+      "total": 5847,
+      "receiverName": "蔣東海",
+      "phone": "0123456789",
+      "email": "alie40521@gmail.com",
+      "address": "Taipei",
+      "paymentMethod": "CVS",
+      "shippingMethod": "HOME_DELIVERY",
+      "paymentStatus": "PENDING",
+      "createdAt": "2026-03-06T16:42:04.159Z",
+      "updatedAt": "2026-03-06T16:42:04.159Z"
     }
   ]
 }
