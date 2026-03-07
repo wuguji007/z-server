@@ -21,10 +21,17 @@ const {
 } = require('./utils/newebpayUtils');
 
 //資料庫連結check: production or development
-const isProduction = process.env.NODE_ENV === 'production' || !!process.env.PORT;
-const dbPath = isProduction
-  ? (process.env.DB_PATH || path.join(__dirname, 'db.json'))
-  : path.join(__dirname, 'db.json');
+// const isProduction = process.env.NODE_ENV === 'production' || !!process.env.PORT;
+// const dbPath = isProduction
+//   ? (process.env.DB_PATH || path.join(__dirname, 'db.json'))
+//   : path.join(__dirname, 'db.json');
+
+// ✅ 修正：只用 NODE_ENV 判斷環境，不依賴 PORT（Zeabur 本地都會注入 PORT 導致誤判）
+const isProduction = process.env.NODE_ENV === 'production';
+
+// ✅ 優先用 DB_PATH 環境變數（Zeabur 掛載 Volume 時設定）
+// 若未設定則 fallback 到專案根目錄的 db.json（需確保 db.json 已 commit 進 repo）
+const dbPath = process.env.DB_PATH || path.join(__dirname, 'db.json');
   
 
 // Dev Mode使用
