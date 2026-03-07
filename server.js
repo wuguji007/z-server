@@ -175,11 +175,11 @@ server.post('/api/register', async (req,res) => {
   }
 
   if (password.length < 6) {
-      return res.status(400).json({ message: "密碼至少需要 6 個字元"});
+    return res.status(400).json({ message: "密碼至少需要 6 個字元"});
   }
 
   const userExists = router.db.get('users').find({ email }).value();
-  if (userExists === email) {
+  if (userExists) {
     return res.status(400).json({ message: "此 Email 已被註冊" });
   }
 
@@ -212,19 +212,14 @@ server.post('/api/register', async (req,res) => {
       await sendVerificationEmail(email, verificationCode);
       console.log('✅ 郵件發送成功');
 
-      res.status(200).json({
+      return res.status(201).json({
         message: '註冊成功，驗證碼已發送至您的信箱',
         data: { email: newUser.email, id: newUser.id }
       });
     } catch (mailError) {
       console.log(`[開發模式備援]郵件發送失敗，您的驗證碼是：\x1b[33m${verificationCode}\x1b[0m`);
-      res.status(500).json({ message: "郵件發送失敗", error: mailError.message });
-      
+      res.status(500).json({ message: "郵件發送失敗", error: mailError.message });    
     }
-
-    //註冊成功，引導去驗證
-    return res.status(201).json({ message: "註冊成功，驗證碼已發送至您的信箱", email });
-
 
   } catch (error) {
     console.log(error);
