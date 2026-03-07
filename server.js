@@ -547,8 +547,9 @@ server.post('/api/payment/create-order', (req, res) => {
     LoginType: 0,
     // 付款完成後藍新POST回後端（非同步通知）
     NotifyURL: `${BACKEND_URL}/api/payment/notify`,
-    ReturnURL:   `${FRONTEND_URL}/z-client/index.html#/payment-complete`,
-    CustomerURL: `${FRONTEND_URL}/z-client/index.html#/payment-complete`,
+    // GitHub Pages 靜態網站不接受 POST，藍新以 POST 導回，必須先經後端轉址
+    ReturnURL:   `${BACKEND_URL}/z-client/index.html#/payment-complete`,
+    CustomerURL: `${BACKEND_URL}/z-client/index.html#/payment-complete`,
     ...paymentParams,
   };
 
@@ -652,6 +653,40 @@ server.post('/api/payment/notify', bodyParser.urlencoded({ extended: false }), a
     return res.status(500).send('Error');
   }
 });
+
+
+/**
+ * POST /api/payment/return
+ * 藍新同步導頁（ReturnURL）
+ * 藍新付款完成後以 POST 導回此路由，後端取得 MerchantOrderNo 後
+ * 用 302 redirect 把用戶帶到前端 PaymentCompletePage
+ * 注意：不在此處更新訂單狀態，訂單狀態由 NotifyURL 非同步處理
+ */
+server.post("/api/payment/return", bodyParser.urlencoded({ extended: false }), (req, res) => {
+  console.log("[Payment Return] 收到藍新導頁回呼:", req.body);
+  const { MerchantOrderNo, Amt, Status } = req.body;
+
+  let orderNo = MerchantOrderNo;
+  let amt = Amt;
+  let status = Status;
+
+  // 若直接欄位沒有，嘗試從 TradeInfo 解密取得
+  if (!orderNo && req.body.TradeInfo) {
+    try {
+      const tradeResult = createAesDecrypt(req.body.TradeInfo);
+      orderNo = tradeResult.MerchantOrderNo;
+      amt = tradeResult.Amt;
+      status = tradeResult.Status || req.body.Status;
+    } catch (e) {
+      console.error("[Payment Return] 解密失敗:", e.message);
+    }
+  }
+
+  const redirectUrl = FRONTEND_URL + "/z-client/index.html#/payment-complete?orderNo=" + (orderNo || "") + "&amt=" + (amt || "") + "&status=" + (status || "");
+  console.log("[Payment Return] redirect →", redirectUrl);
+  return res.redirect(302, redirectUrl);
+});
+
 
 
 // ⚠️ 僅開發測試用，上線前移除
