@@ -22,7 +22,10 @@ const {
 
 //資料庫連結check: production or development
 const isProduction = process.env.NODE_ENV === 'production' || !!process.env.PORT;
-const dbPath = isProduction ? '/data/db.json': path.join(__dirname, 'db.json');
+const dbPath = isProduction
+  ? (process.env.DB_PATH || path.join(__dirname, 'db.json'))
+  : path.join(__dirname, 'db.json');
+  
 
 // Dev Mode使用
 // const dbPath = path.join(__dirname, 'db.json');
