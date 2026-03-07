@@ -67,7 +67,14 @@ const middlewares = jsonServer.defaults({ bodyParser: false });
 // 啟用 CORS (允許前端跨網域請求)
 server.use(cors());
 server.use(middlewares);
-server.use(bodyParser.json());
+
+// ✅ 修正：/api/payment/notify 由藍新以 urlencoded 格式回呼
+// 跳過全域 json parser，避免 stream 被提前讀走導致 500
+server.use((req, res, next) => {
+  if (req.path === '/api/payment/notify') return next();
+  bodyParser.json()(req, res, next);
+});
+// server.use(bodyParser.json());  // 因Json-server預設行為而強制讀取stream
 server.use(bodyParser.urlencoded({ extended: true }));
 // server.use(jsonServer.bodyParser);
 
@@ -567,7 +574,7 @@ server.post('/api/payment/create-order', (req, res) => {
  * 注意：此路由不可要求JWT，藍新無法帶Token
 */
 
-server.post('/api/payment/notify', async (req, res) => {
+server.post('/api/payment/notify', bodyParser.urlencoded({ extended: false }), async (req, res) => {
   console.log('收到藍新回呼:', req.body);
   const { TradeInfo, Status } = req.body;
 
