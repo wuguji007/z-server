@@ -26,10 +26,10 @@ const {
 //   ? (process.env.DB_PATH || path.join(__dirname, 'db.json'))
 //   : path.join(__dirname, 'db.json');
 
-// ✅ 修正：只用 NODE_ENV 判斷環境，不依賴 PORT（Zeabur 本地都會注入 PORT 導致誤判）
+// 修正：只用 NODE_ENV 判斷環境，不依賴 PORT（Zeabur 本地都會注入 PORT 導致誤判）
 const isProduction = process.env.NODE_ENV === 'production';
 
-// ✅ 優先用 DB_PATH 環境變數（Zeabur 掛載 Volume 時設定）
+// 優先用 DB_PATH 環境變數（Zeabur 掛載 Volume 時設定）
 // 若未設定則 fallback 到專案根目錄的 db.json（需確保 db.json 已 commit 進 repo）
 const dbPath = process.env.DB_PATH || path.join(__dirname, 'db.json');
   
@@ -758,6 +758,33 @@ server.get('/api/dev/mock-notify/:orderNo', (req, res) => {
 
 
 /**
+ * GET /api/me
+ * 憑token獲取當前登入者資訊
+ * 解決前端重新整理後 user 狀態遺失的問題
+ */
+server.get('/api/me', (req, res) => {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) return res.status(401).json({ message: '未授權' });
+
+  try {
+    const decoded = jwt.verify(token, SECRET_KEY);
+    const user = router.db.get('users').find({ id: decoded.id }).value();
+
+    if (!user) return res.status(404).json({ message: '找不到使用者' });
+
+    // 排除敏感資料
+    const { password, verificationCode, ...userSafe } = user;
+    console.log('會員資料:', userSafe);
+    return res.status(200).json(userSafe);
+  } catch (err) {
+    return res.status(401).json({ message: 'Token 無效' });
+  }
+});
+
+
+/**
  * GET /api/orders?merchantOrderNo=ZNM-xxxx
  * 前端查詢特定訂單狀態
  * 注意：需登入 && 只能查詢自己的訂單 && 後端驗證JWT和訂單所屬用戶
@@ -772,35 +799,154 @@ server.get('/api/orders', (req, res) => {
     return res.status(401).json({ message: '請先登入，缺少 Token' });
   }
 
-  let currentUser;
+  // let currentUser;
+  // try {
+  //   currentUser = jwt.verify(token, SECRET_KEY);
+  // } catch (err) {
+  //   return res.status(401).json({ message: 'Token 無效或已過期' });
+  // }
+
   try {
-    currentUser = jwt.verify(token, SECRET_KEY);
-  } catch (err) {
-    return res.status(401).json({ message: 'Token 無效或已過期' });
+    // 解析 Token
+    const decoded = jwt.verify(token, SECRET_KEY);
+    
+    // 注意：登入時我們封裝的是 { id: user.id }，所以這裡取 decoded.id
+    const currentUserId = decoded.id; 
+
+    if (!currentUserId) {
+      console.error('[API Orders] Token 中找不到使用者 ID');
+      return res.status(401).json({ message: 'Token 資訊異常' });
+    }
+    
+    // 取得資料庫中所有訂單的原始陣列
+    const allOrders = router.db.get('orders').value() || [];
+
+    //查詢單筆訂單 + 安全檢查
+    if (merchantOrderNo) {
+      const order = allOrders.find(o => o.merchantOrderNo === merchantOrderNo);
+      
+      if (!order) {
+        return res.status(404).json({ message: '找不到此訂單' });
+      }
+      
+      // 安全檢查：只能查看自己的訂單
+      if (order.userId !== currentUserId) {
+        console.warn(`[API Orders] 用戶 ${currentUserId} 嘗試存取不屬於其之訂單 ${merchantOrderNo}`);
+        return res.status(403).json({ message: '無權限查看此訂單' });
+      }
+      
+      return res.status(200).json([order]);
+    }
+
+    console.log('查詢訂單 - userId:', currentUserId, '| merchantOrderNo:', merchantOrderNo || '（查全部）');
+
+    //查詢該會員所有訂單(使用原生filter)
+    const userOrders = allOrders
+      .filter(order => order.userId === currentUserId)
+      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+    console.log(`[API Orders] 用戶 ${currentUserId} 共有 ${userOrders.length} 筆訂單`);
+    return res.status(200).json(userOrders);
+
+  } catch (error) {
+      console.error('[API Orders] Token 驗證失敗:', err.message);
+      return res.status(401).json({ message: 'Token 無效或已過期' });
   }
 
-  console.log('查詢訂單 - userId:', currentUser.id, '| merchantOrderNo:', merchantOrderNo || '（查全部）');
 
   // 查找單筆訂單
-  if (merchantOrderNo) {
-    const order = router.db.get('orders').find({ merchantOrderNo: merchantOrderNo }).value();
-    if (!order) {
-      return res.status(404).json({ message: '找不到此訂單' });
-    }
-    if (order.userId !== currentUser.id) {
-      return res.status(403).json({ message: '無權限查看此訂單' });
-    }
-    return res.status(200).json([order]);
-  }
+  // if (merchantOrderNo) {
+  //   const order = router.db.get('orders').find({ merchantOrderNo: merchantOrderNo }).value();
+  //   if (!order) {
+  //     return res.status(404).json({ message: '找不到此訂單' });
+  //   }
+  //   if (order.userId !== currentUser.id) {
+  //     return res.status(403).json({ message: '無權限查看此訂單' });
+  //   }
+  //   return res.status(200).json([order]);
+  // }
 
-  // 回傳此使用者所有訂單(依建立時間倒序）
-  const orders = router.db.get('orders')
-    .filter({ userId: currentUser.id })
-    .value()
-    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-  return res.status(200).json(orders);
+  // // 回傳此使用者所有訂單(依建立時間倒序）
+  // const orders = router.db.get('orders')
+  //   .filter({ userId: currentUser.id })
+  //   .value()
+  //   .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  // return res.status(200).json(orders);
 
 });
+
+
+/**
+ * POST /api/payment/repay
+ * 針對現有 PENDING 訂單重新取得藍新付款加密參數
+ * 會員中心「立即付款」功能
+ */
+// server.post('/api/payment/repay', (req, res) => {
+//   const { merchantOrderNo } = req.body;
+
+//   // 驗證 JWT
+//   const authHeader = req.headers['authorization'];
+//   const token = authHeader && authHeader.split(' ')[1];
+
+//   if (!token) return res.status(401).json({ message: '請先登入' });
+
+//   let currentUser;
+//   try {
+//     currentUser = jwt.verify(token, SECRET_KEY);
+//   } catch (err) {
+//     return res.status(401).json({ message: 'Token 已失效' });
+//   }
+
+//   // 查找訂單
+//   const order = router.db.get('orders').find({ merchantOrderNo }).value();
+
+//   if (!order) return res.status(404).json({ message: '找不到訂單' });
+//   if (order.userId !== currentUser.id) return res.status(403).json({ message: '無權支付此訂單' });
+//   if (order.paymentStatus !== 'PENDING') return res.status(400).json({ message: '此訂單已處理完成，不需重複付款' });
+
+//   // 準備付款參數 (邏輯與create-order一致)
+//   const buildPaymentParams = (method) => {
+//     switch (method) {
+//       case 'CREDIT':      return { CREDIT: 1 };
+//       case 'CREDIT_INST': return { CREDIT: 1, InstFlag: '3,6,12' };
+//       case 'WEBATM':      return { WEBATM: 1 };
+//       case 'VACC':        return { VACC: 1 };
+//       case 'CVS':         return { CVS: 1 };
+//       default:            return { CREDIT: 1 };
+//     }
+//   };
+
+//   const tradeInfo = {
+//     MerchantID,
+//     RespondType: 'JSON',
+//     TimeStamp: Math.floor(Date.now() / 1000).toString(),
+//     Version,
+//     MerchantOrderNo: merchantOrderNo,
+//     Amt: order.total,
+//     ItemDesc: order.items?.map(i => i.title || i.name).join(',').slice(0, 50) || '商品支付',
+//     Email: order.email,
+//     LoginType: 0,
+//     NotifyURL: `${BACKEND_URL}/api/payment/notify`,
+//     ReturnURL: `${BACKEND_URL}/api/payment/return`,
+//     CustomerURL: `${BACKEND_URL}/api/payment/return`,
+//     ...buildPaymentParams(order.paymentMethod),
+//   };
+
+//   const aesEncrypted = createAesEncrypt(tradeInfo);
+//   const shaEncrypted = createShaEncrypt(aesEncrypted);
+
+//   console.log(`[Repay] 重新產生藍新加密資訊: ${merchantOrderNo}`);
+
+//   res.status(200).json({
+//     MerchantID,
+//     TradeInfo: aesEncrypted,
+//     TradeSha: shaEncrypted,
+//     Version,
+//     PaymentUrl: NEWEBPAY_URL
+//   });
+// });
+
+
 
 // 測試解密路由
 server.get('/api/dev/test-decrypt', (req, res) => {
